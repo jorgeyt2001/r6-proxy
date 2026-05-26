@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: r6-proxy-api
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: R6_EMAIL
+        sync: false
+      - key: R6_PASSWORD
+        sync: false
+      - key: CACHE_TTL_SECONDS
+        value: "3600"
+      - key: PORT
+        value: "8000"
