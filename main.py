@@ -7,6 +7,10 @@ import asyncio
 import json
 import os
 import time
+
+# Load .env file if present
+from dotenv import load_dotenv
+load_dotenv()
 from contextlib import asynccontextmanager
 from typing import Dict, Optional
 
